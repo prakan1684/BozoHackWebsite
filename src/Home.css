@@ -10,10 +10,8 @@ nav {
   display: flex;
 }
 .left-side-container{
-  /* position: relative; */
   display: flex;
   margin-left: 50px;
-  /* max-width: 150px; */
   margin: none !important;
   padding: none;
 }
@@ -31,11 +29,9 @@ nav {
 }
 .right-inner-container{
   align-self: center;
-  margin-top: -14px;
   align-items: center;
 }
 .styled-btn{
-  font-family: 'Roboto Mono', monospace;
   border: 1px solid #F24957;
   padding: 10px 30px 10px 30px;
   background: none;
