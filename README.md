@@ -1,2 +1,2 @@
 # BozoHackWebsite
-React-Native website for Illinois hackathon
+React-Native Website for Illinois Hackathon
