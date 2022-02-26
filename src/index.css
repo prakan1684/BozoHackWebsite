@@ -3,10 +3,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 body{
     background: #FBDCC5;
     color: #3E2421;
     font-family: 'Roboto Mono', monospace;
     margin: 0;
+}
+.main-content-container{
+    padding: 30px;
+    margin-left: 25%;
 }

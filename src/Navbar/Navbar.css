@@ -1,74 +1,66 @@
 .navbar{
+  transition: 0.4s;
   position: fixed;
   overflow: auto;
   padding: 20px;
   height: 100%;
-  width: 275px;
-  background: black;
+  width: 25%;
   height: 100%;
 }
-.navbar-hamburger{
+.navbar-btn{
+  align-self: center;
   font-size: 20px;
-  color: #401428;
+  color: #000000;
   cursor: pointer;
   transition: 0.4s;
   margin-left: 20px;
 }
-.navbar-hamburger:hover{
-  color: #9B718B;
+.navbar-btn:hover{
+  color: #1f0913;
 }
-
-/* nav {
-  font-size: 13px;
-  background: #A85D49;
+.open{
+  animation: SlideIn linear 0.5s;
+  animation-fill-mode: forwards;
+}
+.closed{
+  animation: SlideOut linear 0.5s;
+  animation-fill-mode: forwards;
+}
+.nav-items{
+  margin-top: 50px;
+  margin-left: 20px;
+}
+.navbar-item{
   width: 100%;
-  height: 60px;
-  margin: none;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.466);
-  position: fixed;
-  padding: 7px;
-  display: flex;
+  padding: 10px;
+  margin-bottom: 30px;
+  list-style: none;
 }
-.left-side-container{
-  display: flex;
-  margin-left: 50px;
-  margin: none !important;
-  padding: none;
-}
-
-
-
-.left-side-container img{
-  width: 50px;
-  height: 50px;
-  align-self: center;
-  margin-right: 20px;
-}
-.right-side-container{
-  padding: 26px;
-  position: absolute;
-  right: 0; 
-  margin-right: 50px;
-}
-.right-inner-container{
-  align-self: center;
-  align-items: center;
-}
-
-.styled-btn{
-  border: 1px solid #F24957;
-  padding: 10px 30px 10px 30px;
-  background: none;
-  border-radius: 10px;
-  color: #C2C4D7;
-  transition: 0.4s;
-}
-.styled-btn:hover{
-  background: #F24957;
-  color: #1A1B27;
+.navbar-item-link{
+  color: white;
   cursor: pointer;
+  transition: 0.4s;
+  text-decoration: none !important;
 }
-.google-login-btn{
-  margin-top: 10px;
-  margin-left: px;
-}   */
+.navbar-item-link:hover{
+  color: rgb(0, 0, 0);
+}
+.navbar-item-cur{
+  background: rgba(0, 0, 0, 0.39);
+}
+@keyframes SlideIn {
+  0%{
+    background: none;
+  }
+  100%{
+    background: #A85D49;
+  }
+}
+@keyframes SlideOut {
+  from{
+    background: #A85D49;
+  }
+  to{
+    background: none;
+  }
+}

@@ -1,10 +1,6 @@
 .dsa{
   position: absolute;
 }
-.App{
-  display: flex;
-  flex-direction: row;
-}
 .clock-container{
   margin: auto;
   width: 30%;

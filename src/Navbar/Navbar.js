@@ -1,28 +1,43 @@
 import './Navbar.css';
 import NavbarItem from './NavbarItem'
 import { useState } from 'react';
-import Clock from '../Clock/Clock'
-import TodoForm from '../Todo/TodoForm';
 import { FaBars, FaWindowMinimize } from 'react-icons/fa';
 
 export default function Navbar(){
     const [navbarOpen, updateNavbarState] = useState(false);
 
-    function openNavbar(){
-      
+    let navItems = [
+      {name: 'Home', url: '/', index: 0},
+      {name: 'Spotify', url: '/spotify', index: 1}
+    ];
+
+    function toggleNavBar(){
+      updateNavbarState(!navbarOpen);
     }
 
     return (
-      <nav className='navbar'>
-        <FaBars className='navbar-hamburger' onClick={openNavbar} />
-        <ul>
-          {/* <NavbarItem /> */}
-        </ul>
+      <nav className={'navbar ' + (navbarOpen ? 'open' : 'closed')}>
+        {navbarOpen ? 
+        
+        <FaWindowMinimize className='navbar-btn ' onClick={toggleNavBar} /> : 
+        
+        <FaBars className='navbar-btn' onClick={toggleNavBar} />
+        
+        }
+
+        { navbarOpen ? 
+          <ul className='nav-items'>
+            {
+              navItems.map((el) =>  
+                <NavbarItem  props={el} key={el.index}/>
+              )
+            }
+          </ul> : ''
+        }
       </nav>
     );
 
 
-    // const [isLoggedIn, updateLoginState] = useState(false); // test for now, change later. Local storage to store login state maybe?
     // const [loginInfo, updateLoginInfo] = useState({
     // name: 'Dyldo'
     // });  
