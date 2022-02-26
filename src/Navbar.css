@@ -15,6 +15,9 @@ nav {
   margin: none !important;
   padding: none;
 }
+
+
+
 .left-side-container img{
   width: 50px;
   height: 50px;
@@ -31,6 +34,7 @@ nav {
   align-self: center;
   align-items: center;
 }
+
 .styled-btn{
   border: 1px solid #F24957;
   padding: 10px 30px 10px 30px;
@@ -42,4 +46,9 @@ nav {
 .styled-btn:hover{
   background: #F24957;
   color: #1A1B27;
+  cursor: pointer;
 }
+.google-login-btn{
+  margin-top: 10px;
+  margin-left: px;
+}  

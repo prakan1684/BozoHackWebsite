@@ -1,7 +1,10 @@
 import './App.css';
 import { useState } from 'react';
 import LoginPage from "./Name";
-import Home from './Home';
+import Clock from './Clock';
+import Navbar from './Navbar';
+import ToDoList from './ToDoComp/TodoList';
+import TodoForm from './ToDoComp/TodoForm';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,12 +15,25 @@ import {
 
 function App() {
 
+  
+
   return (
 
     <div className="App">
-      <Home>
+      <div className='navbar-container'>
+        <Navbar className='navbar-home'>
 
-      </Home>
+        </Navbar>
+      </div>
+      <div className='clock-container'>
+        <div className='clock'>
+            <Clock className='clock-text'></Clock>
+        </div>
+      </div>
+
+      <div className='todo-app'>
+          <ToDoList/>
+      </div> 
     </div> 
   );
 }
