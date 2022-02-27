@@ -8,20 +8,25 @@ export default function Navbar(){
 
     let navItems = [
       {name: 'Home', url: '/', index: 0},
-      {name: 'Spotify', url: '/spotify', index: 1}
+      {name: 'Spotify', url: '/spotify', index: 1},
+      {name: 'Calendar', url: '/calendar', index: 2}
+      
     ];
 
     function toggleNavBar(){
       updateNavbarState(!navbarOpen);
     }
 
+
     return (
       <nav className={'navbar ' + (navbarOpen ? 'open' : 'closed')}>
         {navbarOpen ? 
+
         
-        <FaWindowMinimize className='navbar-btn ' onClick={toggleNavBar} /> : 
         
-        <FaBars className='navbar-btn' onClick={toggleNavBar} />
+        <img src='https://cdn0.iconfinder.com/data/icons/symbolicons-junk-food/28/cookie-512.png' className='navbar-btn ' onClick={toggleNavBar} /> : 
+        
+        <img src='https://cdn1.iconfinder.com/data/icons/food-volume-ii/64/zcookie-512.png' className='navbar-btn' onClick={toggleNavBar} />
         
         }
 

@@ -12,7 +12,7 @@ function Clock() {
       }, 1000);
     }, []);
   
-    return <div style={{ fontSize: "50px", margin: "1 px"}}>{clockState}</div>;
+    return <div style={{ fontSize: "50px", fontFamily: "'Roboto Mono', monospace", margin: "1 px"}}>{clockState}</div>;
   }
   
   export default Clock;
